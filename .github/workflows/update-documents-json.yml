@@ -1,0 +1,48 @@
+name: Update documents.json
+
+on:
+  push:
+    # Avoid infinite loops when this workflow commits only documents.json
+    paths-ignore:
+      - 'search/documents.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-documents-json-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate search/documents.json
+        run: |
+          python search/build_documents.py
+
+      - name: Commit changes (if any)
+        run: |
+          if git diff --quiet -- search/documents.json; then
+            echo "No changes to search/documents.json"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add search/documents.json
+          git commit -m "chore: update search/documents.json"
+          git push
