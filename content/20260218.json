@@ -1,0 +1,160 @@
+{
+  "file_id": "bd90835c-b0bc-40cb-8fea-0366a38dfbed",
+  "summary_data": {
+    "Speakers": "The panel includes Alexander Knight, Chris Sabato, Grant Whitehead, Carl, and Courtney (SPEAKER_03).",
+    "brief_summary": "The discussion covers various technical questions related to audio equipment, software tools, network protocols, inventory management using NFC tags, and methods for removing stuck fishing tapes from ceilings.",
+    "Questions": [
+      {
+        "Question": "Is anyone using NFC tags for inventory?",
+        "Answer": "NFC tags are not recommended for storing repair use history or serial numbers due to programming challenges and security issues. QR codes are suggested as they can be easily linked to databases, making it simpler to store and manage data. Carl mentions using NFC tags as unique identifiers that trigger shortcuts on phones but notes that they may interfere with metal objects like microphones.",
+        "Speakers": [
+          "Grant Whitehead",
+          "Carl"
+        ],
+        "timestamp_range": "[00:16] - [05:30]"
+      },
+      {
+        "Question": "Any idea if NDI tools will ever become equal on Mac and PC?",
+        "Answer": "NDI tools are currently more developed for PCs, with some features missing on the Mac side. The panel suggests that Apple's network stack might be a reason for this disparity. However, there is potential for future development, especially with Apple Silicon, but it would require significant effort to match the PC capabilities.",
+        "Speakers": [
+          "SPEAKER_00",
+          "Alexander Knight"
+        ],
+        "timestamp_range": "[06:42] - [11:50]"
+      },
+      {
+        "Question": "Suggestions for removing a stuck fishing tape from a ceiling?",
+        "Answer": "The panel suggests several methods to remove the stuck fishing tape, including pushing it forward with force, listening for its location by jiggling it, and cutting it off if necessary. Grant Whitehead recommends using a fiber optic camera to visually inspect the issue before attempting removal. Alexander Knight suggests using a magnet to guide the tape through the ceiling instead of pushing it.",
+        "Speakers": [
+          "Grant Whitehead",
+          "Alexander Knight"
+        ],
+        "timestamp_range": "[12:05] - [17:04]"
+      },
+      {
+        "Question": "Yeah, I was just gonna add, there are different makes of fish tapes that rather than having that type of folded over end on them, actually have a captured eye at the end that's actually on a rotating, like the way that it's made it will rotate. And then you can't inadvertently, you can still tie something to it, but you can't inadvertently snag something with it, which might be a future consideration.",
+        "Answer": "There are different makes of fish tapes available where one end is designed as a captured eye on a rotating mechanism. This design prevents accidental snags while still allowing the user to attach something to the tape if needed.",
+        "Speakers": [
+          "Alexander Knight (suggested)"
+        ],
+        "timestamp_range": "[17:21] - [18:03]"
+      },
+      {
+        "Question": "What do we think about Apple's new music connect service? Has anyone played around with this?",
+        "Answer": "Apple's new music connect service is a rebranded version of iTunes Connect, which allows for uploading assets and promoting records. While the idea is good, it seems unusual given that Apple already had this functionality before.",
+        "Speakers": [
+          "Alexander Knight (suggested)",
+          "Chris Sabato (suggested)"
+        ],
+        "timestamp_range": "[19:54] - [20:59]"
+      },
+      {
+        "Question": "Does Matty require a license to implement? Is that why we think Blackmagic Design went with Matty instead of some other AOIP protocol on the ATEM Extreme ISO G2?",
+        "Answer": "MATTY (Multi-Audio Digital Interface) is an open standard from AES and can be used without licensing. This makes it a preferred choice for Blackmagic Design over protocols like Dante, which require a license.",
+        "Speakers": [
+          "Grant Whitehead (suggested)",
+          "SPEAKER_03"
+        ],
+        "timestamp_range": "[21:21] - [22:25]"
+      },
+      {
+        "Question": "Depending on use case, what could be better, Dantevia or loopback?",
+        "Answer": "Dantevia is cross-platform and supports ASIO, WDM drivers in Windows, and Core Audio on Mac. Loopback is Mac-only but allows for app-level routing of audio between different devices. The choice depends on the specific use case and platform.",
+        "Speakers": [
+          "Grant Whitehead (suggested)",
+          "Alexander Knight (suggested)"
+        ],
+        "timestamp_range": "[25:42] - [27:41]"
+      },
+      {
+        "Question": "Routing audio loopback or audio hijack was listening to a conversation last night about routing for comms and program output using same headset and device mapping to one ear. I use different headsets and devices separate to separate thoughts.",
+        "Answer": "Both Loopback and Audio Hijack are recommended, with Loopback being essential for inter-routing between different audio devices due to its special driver capabilities. Audio Hijack is useful for specific tasks like recording podcast sources or running VST plugins.",
+        "Speakers": [
+          "Grant Whitehead (suggested)",
+          "Carl"
+        ],
+        "timestamp_range": "[28:02] - [31:46]"
+      },
+      {
+        "Question": "Guy, with NDI tools, can audio be sent from site A to a remote site or would it be easier to plug in audio to a camera at site A and just pick up that audio in something like NDI monitor at the remote site?",
+        "Answer": "NDI tools allow for sending both video and audio directly between sites. Plugging the audio into a camera at Site A and using an NDI monitor at the remote site is also possible but less efficient compared to direct NDI transmission.",
+        "Speakers": [
+          "SPEAKER_00"
+        ],
+        "timestamp_range": "[34:12] - [34:12]"
+      },
+      {
+        "Question": "Are you on a Mac or are you on a PC?",
+        "Answer": "The answer depends on the user's operating system. For PCs, there is an audio direct plugin available with DAWs like Harrison Mixbus. For Mac users, AVSono and NDI tools can be used for ASIO drivers compatibility. There are also free options like Reaper.",
+        "Speakers": [
+          "Grant Whitehead",
+          "Carl"
+        ],
+        "timestamp_range": "[00:34] - [05:12]"
+      },
+      {
+        "Question": "Has anyone seen the BTS of how they're managing audio mixing for the Olympics, mixing in North America and remote control over local mixers for in-ear monitors?",
+        "Answer": "The Olympics' audio is mixed at a facility in Stamford, Connecticut. The feed from Olympic Broadcasting Services (OBS) comes via fiber into this facility where it's routed to various consoles and announcer booths using Audio Technica headsets with microphones and earphones. The commentary originates from the American side of the Olympics.",
+        "Speakers": [
+          "Grant Whitehead"
+        ],
+        "timestamp_range": "[06:15] - [38:27]"
+      },
+      {
+        "Question": "Can you explain the audio and video formats of the Rodecaster Video S and what cameras you use with it?",
+        "Answer": "The Rodecaster Video S supports 1080p frame rates from 23.98 to 60 FPS, selectable through the Rodecaster app. The app allows for setting up inputs, switching types (cuts or dissolves), and recording formats. Cameras can be connected via USB or HDMI.",
+        "Speakers": [
+          "Grant Whitehead"
+        ],
+        "timestamp_range": "[38:55] - [42:07]"
+      },
+      {
+        "Question": "Does anyone know if you can send loopback audio to AirPlay devices?",
+        "Answer": "It is possible, but it depends on the primary output device settings and permissions. For Mac users, aggregate devices in macOS can be used to integrate AirPlay as a traditional audio device.",
+        "Speakers": [
+          "Carl"
+        ],
+        "timestamp_range": "[40:52] - [42:34]"
+      },
+      {
+        "Question": "Have you ever had audio latency issues with Rogamig sound source in a production pipeline?",
+        "Answer": "No, there have been no reported latency issues.",
+        "Speakers": [
+          "Alexander Knight"
+        ],
+        "timestamp_range": "[42:46] - [42:50]"
+      },
+      {
+        "Question": "Does anyone have experience with live grading, example using Resolve, a live stream from Camera Log through to HLG Rec 2020 and coding?",
+        "Answer": "It is possible but requires the studio version of DaVinci Resolve. You need specific cards (Black Magic or AJA) for input and output. The process involves applying LUTs, monitoring with Flanders scopes, and using a fast computer with a decent GPU.",
+        "Speakers": [
+          "SPEAKER_03"
+        ],
+        "timestamp_range": "[43:05] - [43:41]"
+      },
+      {
+        "Question": "Looking for an alternative to EBS to provide a 15-minute delay on an outbound stream. We also need the ability to dump the logo slate, any proven workflows out there?",
+        "Answer": "For a 15-minute delay and logo dumping, vMix and Premiere can be used with an SRT MXF file ingested into Premiere. This workflow allows for adding graphics or logos before playing back the delayed stream. For precise control, EVS from Ross or Grass Valley is recommended.",
+        "Speakers": [
+          "SPEAKER_03"
+        ],
+        "timestamp_range": "[48:41] - [50:21]"
+      }
+    ],
+    "metadata": {
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "usage_tokens": 5621,
+      "transcript_length": 0,
+      "user_context_window": 8096,
+      "sections_processed": 3,
+      "processing_method": "multi-section",
+      "processing_time_ms": 36742,
+      "output_language": "en"
+    }
+  },
+  "source": "opensearch",
+  "document_id": "c368320c-1f0d-43b4-ad97-ed56835642c1",
+  "created_at": "2026-02-18T16:52:27.937668",
+  "updated_at": "2026-02-18T16:52:27.937673"
+}

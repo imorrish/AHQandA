@@ -5,7 +5,7 @@
 $fileid = "970d4583-2e18-445e-8cf7-37bc6e2075f2"
 
 # Get yesterday's date in yyyymmdd format
-$yesterday = (Get-Date).AddDays(-1).ToString("yyyyMMdd")
+$yesterday = (Get-Date).AddDays(-3).ToString("yyyyMMdd")
 
 # Build the output filename
 $contentDir = "e:\git\ahqanda\content"
