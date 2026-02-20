@@ -1,0 +1,5 @@
+node_modules/
+_site/
+
+# Tailwind build output (generated)
+src/assets/styles.css

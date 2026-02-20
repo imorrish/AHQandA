@@ -1,0 +1,59 @@
+---
+layout: layout.njk
+title: "AHQandA"
+---
+
+{% if not summaries.latest %}
+  <div class="rounded-lg border border-slate-800 bg-slate-900/30 p-6">
+    <h1 class="text-xl font-semibold">No summary files found</h1>
+    <p class="mt-2 text-slate-300">Add JSON files named like <span class="font-mono">yyyymmdd.json</span> in the repo root.</p>
+  </div>
+{% else %}
+  <h1 class="text-2xl font-semibold">{{ summaries.latest.date | dateLabel }}</h1>
+  <p class="mt-1 text-sm text-slate-400">Defaulting to the most recent JSON file.</p>
+
+  {% set s = summaries.latest.data.summary_data %}
+  {% if summaries.latest.data.parse_error %}
+    <div class="mt-6 rounded-lg border border-red-900/50 bg-red-950/40 p-5">
+      <div class="font-semibold">JSON parse error</div>
+      <div class="mt-1 text-sm text-red-200">{{ summaries.latest.data.parse_error_message }}</div>
+    </div>
+  {% else %}
+    <div class="mt-6 grid gap-6">
+      <section class="rounded-lg border border-slate-800 bg-slate-900/30 p-6">
+        <h2 class="text-lg font-semibold">Brief summary</h2>
+        <p class="mt-3 whitespace-pre-wrap text-slate-200">{{ s.brief_summary or "(missing brief_summary)" }}</p>
+      </section>
+
+      <section class="rounded-lg border border-slate-800 bg-slate-900/30 p-6">
+        <h2 class="text-lg font-semibold">Speakers</h2>
+        <p class="mt-3 whitespace-pre-wrap text-slate-200">{{ s.Speakers or "(missing Speakers)" }}</p>
+      </section>
+
+      <section class="rounded-lg border border-slate-800 bg-slate-900/30 p-6">
+        <h2 class="text-lg font-semibold">Questions</h2>
+
+        {% if s.Questions and s.Questions.length %}
+          <div class="mt-4 grid gap-4">
+            {% for q in s.Questions %}
+              <article class="rounded-md border border-slate-800 bg-slate-950/30 p-4">
+                <div class="text-base font-semibold">{{ q.Question or "(missing Question)" }}</div>
+                <div class="mt-2 whitespace-pre-wrap text-sm text-slate-200">{{ q.Answer or "(missing Answer)" }}</div>
+                <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400">
+                  {% if q.timestamp_range %}<div>⏱ {{ q.timestamp_range }}</div>{% endif %}
+                  {% if q.Speakers %}<div>🎙 {{ q.Speakers | dump }}</div>{% endif %}
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="mt-3 text-slate-300">No questions found.</p>
+        {% endif %}
+      </section>
+
+      <div class="text-sm text-slate-400">
+        <a class="underline" href="{{ summaries.latest.url }}">Open dedicated page →</a>
+      </div>
+    </div>
+  {% endif %}
+{% endif %}

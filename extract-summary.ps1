@@ -8,7 +8,12 @@ $fileid = "970d4583-2e18-445e-8cf7-37bc6e2075f2"
 $yesterday = (Get-Date).AddDays(-1).ToString("yyyyMMdd")
 
 # Build the output filename
-$outFile = "e:\git\ahqanda\$yesterday.json"
+$contentDir = "e:\git\ahqanda\content"
+if (-not (Test-Path $contentDir)) {
+  New-Item -ItemType Directory -Path $contentDir | Out-Null
+}
+
+$outFile = "$contentDir\$yesterday.json"
 
 # Call the API and save the JSON
 # todo: get bearer from env variable or file
