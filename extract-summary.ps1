@@ -1,0 +1,27 @@
+# set the environment variable
+# $env:BEARER_TOKEN = "your_bearer_token_here"
+#
+#get file ID from http://192.168.1.97:5175/flower/tasks
+$fileid = "970d4583-2e18-445e-8cf7-37bc6e2075f2"
+
+# Get yesterday's date in yyyymmdd format
+$yesterday = (Get-Date).AddDays(-1).ToString("yyyyMMdd")
+
+# Build the output filename
+$outFile = "e:\git\ahqanda\$yesterday.json"
+
+# Call the API and save the JSON
+# todo: get bearer from env variable or file
+$bearerToken = $env:BEARER_TOKEN
+#or from http://192.168.1.97:5174/api/auth/login
+
+    
+Invoke-RestMethod `
+  -Method GET `
+  -Uri "http://192.168.1.97:5174/api/files/$fileid/summary" `
+  -Headers @{
+    "accept" = "application/json"
+    "Authorization" = "Bearer $bearerToken"
+  } |
+  ConvertTo-Json -Depth 50 |
+  Out-File -Encoding utf8 $outFile

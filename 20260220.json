@@ -1,0 +1,100 @@
+{
+  "file_id": "970d4583-2e18-445e-8cf7-37bc6e2075f2",
+  "summary_data": {
+    "Speakers": "The panel includes Alexander Knight, Grant Whitehead, Ronnie (SPEAKER_06), and other contributors like SPEAKER_02, SPEAKER_04, SPEAKER_07, and SPEAKER_00.",
+    "brief_summary": "The discussion focused on various tools and techniques for efficient remote work and production, including travel routers, microphones, cameras, lighting setups, visual reasoning technology, and automation solutions. The panel also addressed specific hardware recommendations and software integrations like the Unifi UNAS Pro 4 and ATEM Extreme ISO recording methods.",
+    "Questions": [
+      {
+        "Question": "What if Apple were to come out with something like Frame.io? Would this allow pros on a budget to make video edits on the cheap?",
+        "Answer": "Alexander Knight suggested that while a low-cost MacBook Pro might not have sufficient storage and processing power, integrating services like Frame.io could help offload some of the heavy lifting. This would enable users to upload videos for editing in the cloud and download proxy files for local work, making it possible to edit on cheaper hardware.",
+        "Speakers": [
+          "Alexander Knight"
+        ],
+        "timestamp_range": "[00:27] - [01:58]"
+      },
+      {
+        "Question": "What's the best small travel kit advice you have to keep me looking and sounding office hours ready?",
+        "Answer": "The panel suggested using a Shure MV6 microphone for background noise reduction, an MD7 Plus with XLR for future-proofing, and newer laptops with decent cameras. They also recommended positioning the camera at eye level and ensuring proper lighting.",
+        "Speakers": [
+          "SPEAKER_02",
+          "SPEAKER_04"
+        ],
+        "timestamp_range": "[26:43] - [28:56]"
+      },
+      {
+        "Question": "What's the best small travel kit advice you have to keep me looking and sounding office hours ready?",
+        "Answer": "The panel suggested using a Shure MV6 microphone for background noise reduction, an MD7 Plus with XLR for future-proofing, and newer laptops with decent cameras. They also recommended positioning the camera at eye level and ensuring proper lighting.",
+        "Speakers": [
+          "SPEAKER_02",
+          "SPEAKER_04"
+        ],
+        "timestamp_range": "[26:43] - [28:56]"
+      },
+      {
+        "Question": "What's all this new fuss about visual reasoning?",
+        "Answer": "Visual Reasoning is a technology that uses AI to detect and describe scenes in real-time. It can be used for various applications such as PTZ camera control, sports scoring detection, and accessibility by providing spoken descriptions of the screen content. The technology is available through an open-source API called MoonDream, which allows users to integrate it into their workflows.",
+        "Speakers": [
+          "SPEAKER_00"
+        ],
+        "timestamp_range": "[36:17] - [42:04]"
+      },
+      {
+        "Question": "Can you give them a little description, Oliver, of what you saw that I showed?",
+        "Answer": "Oliver observed that Guy had taught Claude (a voice assistant) how to edit in DaVinci Resolve and perform three-point edits. This technology allows for automation in video editing tasks such as replacing clips and making decisions based on visual feedback from the software.",
+        "Speakers": [
+          "SPEAKER_07"
+        ],
+        "timestamp_range": "[42:04] - [42:50]"
+      },
+      {
+        "Question": "As an old time film student and learning the rule of thirds and basic framing theory, I've been asked to shoot vertical video for the socials and it makes my brain hurt and shots stink. What resources are out there to retrain my brain?",
+        "Answer": "The panel suggests that shooting vertical video is not about composing a great-looking shot but more about ensuring your content fits within the social media frame without being ruined by overlays. They recommend using templates and overlays provided by social media platforms like TikTok, Facebook, and Instagram to understand how much real estate each platform takes away from the frame. This helps in placing elements such as faces and text effectively. Additionally, they advise concentrating on shooting a talking head with consistent framing similar to what is done during live shows.",
+        "Speakers": [
+          "Grant Whitehead (suggested)"
+        ],
+        "timestamp_range": "[45:08] - [47:36]"
+      },
+      {
+        "Question": "Any advice on running Zoom tiles to show polls during an all-team event?",
+        "Answer": "The panel suggests using the Zoom Graphics Toolkit for creating and displaying polls. By connecting it to the Zoom meeting, you can create polls in the normal way, and the graphics toolkit will extract that information and display it as beautiful visualizations. These visuals can then be integrated into your VisionMixer or MimoLive setup for broadcasting purposes. The panel also notes that the integration is tight and easy to use, requiring no additional engineering work.",
+        "Speakers": [
+          "SPEAKER_06"
+        ],
+        "timestamp_range": "[48:41] - [57:26]"
+      },
+      {
+        "Question": "The Unifi UNAS Pro 4 is now shipping. Has anyone on the panel considered adding it to their workflow?",
+        "Answer": "The panel discusses the reliability and upgrade path of the Unifi UNAS Pro 4, noting that while it offers an external file system option, the transition from existing systems like Synology or UniFi UNVR might require careful consideration due to data migration challenges. SPEAKER_06 mentions he will likely add this to his equipment inventory in a few weeks once he has tested its reliability and software updates.",
+        "Speakers": [
+          "SPEAKER_04",
+          "SPEAKER_06"
+        ],
+        "timestamp_range": "[55:17] - [58:23]"
+      },
+      {
+        "Question": "Strange request, I've been brought on for a docu-series that wants to do a multi-cam live cut of the interviews. We'll record on camera native resolution, but also record ISOs on the ATEM Extreme ISO, just because you can, should you?",
+        "Answer": "The panel advises recording multiple ISOs as backups and cutting between them during post-production for flexibility. While it's possible to do a live cut in Resolve, there will likely be changes needed later, so having all recordings is beneficial. SPEAKER_00 mentions the ATEM Exporter can help with higher quality footage and XML export for Final Cut Pro editing.",
+        "Speakers": [
+          "Grant Whitehead (suggested)",
+          "SPEAKER_00"
+        ],
+        "timestamp_range": "[57:53] - [61:48]"
+      }
+    ],
+    "metadata": {
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "usage_tokens": 4538,
+      "transcript_length": 0,
+      "user_context_window": 8096,
+      "sections_processed": 3,
+      "processing_method": "multi-section",
+      "processing_time_ms": 26171,
+      "output_language": "en"
+    }
+  },
+  "source": "opensearch",
+  "document_id": "a88f0e5f-c233-41f7-acb4-e598397196e6",
+  "created_at": "2026-02-20T18:50:16.142916",
+  "updated_at": "2026-02-20T18:50:16.142921"
+}
