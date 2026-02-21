@@ -4,6 +4,8 @@
 #get file ID from http://192.168.1.97:5175/flower/tasks
 $fileid = "970d4583-2e18-445e-8cf7-37bc6e2075f2"
 
+#Get file details from 
+
 # Get yesterday's date in yyyymmdd format
 $yesterday = (Get-Date).AddDays(-3).ToString("yyyyMMdd")
 
@@ -20,8 +22,19 @@ $outFile = "$contentDir\$yesterday.json"
 $bearerToken = $env:BEARER_TOKEN
 #or from http://192.168.1.97:5174/api/auth/login
 
-    
-Invoke-RestMethod `
+$fileDetails = Invoke-RestMethod `
+  -Method GET `
+  -Uri "http://192.168.1.97:5174/api/files/$fileid" `
+  -Headers @{
+    "accept" = "application/json"
+    "Authorization" = "Bearer $bearerToken"
+  } |
+  ConvertTo-Json -Depth 2
+ #$fileDetails -split "`n" | Select-Object -First 30
+ ($fileDetails | ConvertFrom-Json).filename
+
+
+$Summary =Invoke-RestMethod `
   -Method GET `
   -Uri "http://192.168.1.97:5174/api/files/$fileid/summary" `
   -Headers @{
