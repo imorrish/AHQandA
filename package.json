@@ -4,7 +4,7 @@
   "type": "commonjs",
   "scripts": {
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./src/assets/styles.css --minify",
-    "build:11ty": "eleventy",
+    "build:11ty": "eleventy --pathprefix=/AHQandA/",
     "build": "npm run build:css && npm run build:11ty",
     "dev:css": "tailwindcss -i ./src/styles/tailwind.css -o ./src/assets/styles.css --watch",
     "dev:11ty": "eleventy --serve --watch --port=7986",
